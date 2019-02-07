@@ -95,13 +95,23 @@ def login():
 
          # Compare Passwords
          if sha256_crypt.verify(password_candidate, password):
-            app.logger.info('password mathced')
+            #app.logger.info('password mathced')
+            # Passed
+            session['logged_in'] = True
+            session['username'] = username
+
+            flash('You are now logged in', 'success')
+            return redirect(url_for('dashboard'))
+         
          else:
-            app.logger.info('password not mathced')
-   
-            
+            error = 'Invalid login'
+            return render_template('login.html', error=error)
+            # Close connection
+            cur.close()
+
       else:
-         app.logger.info('NO USER')
+         error = 'Username not found'
+         return render_template('login.html', error=error)
 
    return render_template('login.html')
 
