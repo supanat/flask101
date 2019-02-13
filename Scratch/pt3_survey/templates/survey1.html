@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Survey <small> Survey1</small></h1>
+
+<div class="container">
+        <h2>Form control: inline radio buttons</h2>
+        
+        <form action="" method="post" >
+
+
+
+        <div class="form-group">
+          <p>question1:</p>
+          <label class="radio-inline">
+            <input type="radio" name="q1radio"  value="1">Option 1
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="q1radio" value="2">Option 2
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="q1radio" value="3">Option 3
+          </label>
+        </div>
+
+
+        <div class="form-group">
+                <p>question2:</p>
+                <label class="radio-inline">
+                  <input type="radio" name="q2radio" value="1">Option 1
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="q2radio" value="2">Option 2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="q2radio" value="3">Option 3
+                </label>
+              </div>
+
+
+        <div class="form-group">
+                    <p>question3:</p>
+                    <label class="radio-inline">
+                      <input type="radio" name="q3radio" value="1">Option 1
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="q3radio" value="4">Option 2
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="q3radio" value="8">Option 3
+                    </label>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+      </div>
+
+
+
+{% endblock %}
