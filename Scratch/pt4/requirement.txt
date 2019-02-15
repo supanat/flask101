@@ -1,0 +1,19 @@
+$pip install flask-mysqldb
+if error message
+    OSError: mysql_config not found
+try
+// $ export PATH=$PATH:/usr/local/mysql/bin 
+$ export PATH=$PATH:/usr/local/mysql-8.0.15-macos10.14-x86_64/bin
+
+after that
+reinstall
+$pip install flask-mysqldb
+
+.............
+
+$ pip install WTForms
+$ pip install passlib
+
+
+............
+$ export DYLD_LIBRARY_PATH=/usr/local/mysql-8.0.15-macos10.14-x86_64/lib:$DYLD_LIBRARY_PATH
